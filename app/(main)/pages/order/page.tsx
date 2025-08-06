@@ -244,6 +244,15 @@ const OrderPage = () => {
                                                         <div>- {option.company?.company_name}</div>
                                                     </div>
                                                 )}
+                                                valueTemplate={(option) => {
+                                                    if (!option) return t('BUNDLE.FORM.PLACEHOLDER.SERVICENAME');
+                                                    return (
+                                                        <div style={{ display: 'flex', gap: '5px' }}>
+                                                            <div>{option.service_category?.category_name}</div>
+                                                            <div>- {option.company?.company_name}</div>
+                                                        </div>
+                                                    );
+                                                }}
                                             />
                                         </div>
 
