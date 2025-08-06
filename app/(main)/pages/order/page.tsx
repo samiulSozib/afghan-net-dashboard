@@ -572,6 +572,14 @@ const OrderPage = () => {
             ];
         }
 
+        if (rowData.transaction_id == null) {
+            items.push({
+                label: t('ORDER.STATUS.CONFIRMED'),
+                icon: 'pi pi-check',
+                command: () => confirmChangeStatus(rowData, 1)
+            });
+        }
+
         if (items.length > 0) {
             return <SplitButton label="" icon="pi pi-cog" model={items} className="p-button-rounded" severity="info" dir="ltr" />;
         }
