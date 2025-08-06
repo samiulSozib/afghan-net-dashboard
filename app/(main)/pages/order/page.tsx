@@ -673,7 +673,7 @@ const OrderPage = () => {
 
     const onPageChange = (event: any) => {
         const page = event.page + 1;
-        dispatch(_fetchOrders(page, searchTag));
+        dispatch(_fetchOrders(page, searchTag,activeFilters));
     };
 
     const exportToExcel = async () => {
