@@ -542,7 +542,7 @@ const OrderPage = () => {
 
         let items: any[] = [];
 
-        if (status === 0 || rowData.transaction_id===null) {
+        if (status === 0 || (rowData.transaction_id===null && status ===1)) {
             // Pending
             items = [
                 {
